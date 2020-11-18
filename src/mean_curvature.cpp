@@ -24,7 +24,7 @@ void mean_curvature(
   Eigen::MatrixXd normals;
   igl::per_face_normals(V, F, normals);
 
-  H.resizeLike(V);
+  H.resize(V.rows());
   H.setZero();
 
   auto get_sign = [](double &signness_dot) {
