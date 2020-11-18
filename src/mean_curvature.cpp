@@ -22,7 +22,7 @@ void mean_curvature(
   Eigen::MatrixXd Hn = mass_inverse * lapacian * V;
 
   Eigen::MatrixXd normals;
-  igl::per_face_normals(V, F, normals);
+  igl::per_vertex_normals(V, F, normals);
 
   H.resize(V.rows());
   H.setZero();
